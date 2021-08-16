@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/analytics.dart';
+import 'package:flutter_web_dashboard/sidebar.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -35,9 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Row(
           children: [
             Container(
-              width: 300,
-              color: Colors.blue,
-              child: Text("Sidebar"),
+              child: SideBar(),
             ),
             Expanded(
               child: Analytics(),

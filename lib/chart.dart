@@ -26,7 +26,7 @@ class PieChart2State extends State {
         child: Row(
           children: <Widget>[
             Expanded(
-              flex: 3,
+              flex: 4,
               child: PieChart(
                 PieChartData(
                   pieTouchData: PieTouchData(touchCallback: (pieTouchResponse) {
@@ -53,6 +53,7 @@ class PieChart2State extends State {
               ),
             ),
             Expanded(
+              flex: 1,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -219,7 +220,7 @@ class PieChart2State extends State {
     );
   }
 
-  List<PieChartSectionData> showingSections({int i}) {
+  List<PieChartSectionData> showingSections({@required int i}) {
     var currentWidth = MediaQuery.of(context).size.width;
     var extraScreenGrid = currentWidth > 1536;
     var largeScreenGrid = currentWidth > 1366;
